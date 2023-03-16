@@ -4,7 +4,7 @@ let port = 3000;
 
 app.set('view engine', 'ejs');
 
-
+app.use('/view', express.static(__dirname+'/view')); //redirect views
 app.use(express.static(__dirname+"/www")); //pour reconnaitre le dossier /www
 app.use('/js',express.static(__dirname+"/node_modules/bootstrap/dist/js"));
 app.use('/js',express.static(__dirname+"/node_modules/jquery/dist/js"));
@@ -16,7 +16,8 @@ app.listen(port, ()=>{
 })
 
 app.get('/', (req, res, next)=>{
-    res.sendFile('/www/index.html');//permet de relier de fichier index au serveur
+    //res.sendFile('/www/index.html');//permet de relier de fichier index au serveur
+    res.render('index.ejs');    
 })
 
 
