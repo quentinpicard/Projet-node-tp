@@ -1,0 +1,22 @@
+<%- include('header')%>
+
+<h1>Bonjour le monde !</h1>
+<p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, quasi.</p>
+
+          <p>
+            <% for(var i=1; i<=5; i++){%>
+              <% if(i==1){%>
+                  <p>Voici <%=i%> canard.</p>
+              <% } else { %>
+                  <p>Voici <%=i%> carnads.</p>
+              <% } %>
+          <% } %>
+          
+          </p>
+
+
+
+
+    <p><strong><%=monobjet.veleur %></strong></p>
+
+<%- include('footer')%>
